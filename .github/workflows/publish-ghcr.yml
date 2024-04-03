@@ -14,9 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
       - name: Build and push image
-        uses: actions/checkout@v3
         run: |
           docker login --username anilvmware --password ${{ secrets.GH_PAT}} ghcr.io
           docker build . -tag ghcr.io/anilvmware/app-engine-image:latest
           docker push ghcr.io/anilvmware/app-engine-image:latest
+
