@@ -19,5 +19,5 @@ jobs:
         run: |
           docker login --username anilvmware --password ${{ secrets.GIT_PAT}} ghcr.io
           docker build . --tag ghcr.io/anilvmware/app-engine-image:test
-          docker push ghcr.io/anilvmware/app-engine-image:latest
+          docker push ghcr.io/anilvmware/app-engine-image:test
 
