@@ -18,6 +18,6 @@ jobs:
       - name: Build and push image
         run: |
           docker login --username anilvmware --password ${{ secrets.GIT_PAT}} ghcr.io
-          docker build . --tag ghcr.io/anilvmware/app-engine-image:v1
-          docker push ghcr.io/anilvmware/app-engine-image:v1
+          docker build . --tag ghcr.io/anilvmware/tap-1.8-image:v1
+          docker push ghcr.io/anilvmware/tap-1.8-image:v1
 
